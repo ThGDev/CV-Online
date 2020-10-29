@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/*
+ * style.css - Thierry GOGUET
+ * E-mail: thida.dev@gmail.com
+ * Free to use - 2020
+ */
+
+ /* ============================== LIGHT THEME ============================== */
+ body {
+    --text-color: #1D1E20;
+    --bkg-color: #DDDDDD;
+    --tog: rotate(0deg);
+    --link-menu: rgba(29, 30, 32, 0.5);
+  }
+  body.dark-theme {
+    --text-color: #eee;
+    --bkg-color: #1D1E20;
+    --tog: rotate(180deg);
+    --link-menu: rgba(255, 255, 255, 0.1);
+  }
+
+ /* ============================== DARK THEME ============================== */
+@media (prefers-color-scheme: dark) {
+    /* defaults to dark theme */
+    body {
+      --text-color: #eee;
+      --bkg-color: #1D1E20;
+      --tog: rotate(180deg);
+    }
+    body.light-theme {
+      --text-color: #1D1E20;
+      --bkg-color: #DDDDDD;
+      --tog: rotate(0deg);
+    }
+  }
+
+
+ /* ============================== STYLES GENERAUX ============================== */
+:root, html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: var(--bkg-color);
+}
+h1, p {
+    color: var(--text-color);
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-space-arnd{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.flex-col{
+    flex-direction: column;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+#menu{
+    width: 5vw;
+    height: 100vh;
+    font-size: 25px;
+    border: 1px solid black;
+}
+
+#iconlightmode{     /* mon en-tête de menu de luminosité */
+    height: 10vh;
+    left: 0px;
+    top: 0px;
+    background: #3CA2A2;
+    font-size: 35px;
+}
+
+#menu a, #menu a:visited{   /* les liens de mon menu */
+    font-size: 46px;
+    color: var(--link-menu);
+}
+
+#toggle{     
+    height: 5vh;
+}
+#toggle i{                /* mes 2 toggles */
+    cursor: pointer;
+    color: #40B53E;
+    transform: var(--tog);
+    border: 1px solid black;
+}
+
+#liens-menu{
+    height: 85vh;
+}
