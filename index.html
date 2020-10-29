@@ -8,28 +8,65 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 <body>
-    <!-- DIV MENU GAUCHE -->
-    <div id="menu" class="">
-        <!-- ICONE MODE DE LUMINOSITE -->
-        <div id="iconlightmode" class="flex-center">
-            <i class="fas fa-adjust"></i>
+    <div id="wrap" class="flex-row">
+        <!-- DIV MENU GAUCHE -->
+        <div id="menu" class="">
+            <!-- ICONE MODE DE LUMINOSITE -->
+            <div id="iconlightmode" class="flex-center">
+                <i class="fas fa-adjust"></i>
+            </div>
+    
+            <!-- LE TOGGLE POUR BASCULER D'UN MODE A L'AUTRE -->
+            <div id="toggle" class="flex-center">
+                <i class="fas fa-toggle-on"></i>
+            </div>
+    
+            <!-- MES ICONES/LIENS DE MENU -->
+            <div id="liens-menu" class="flex-col flex-center">
+                <a href="#about"><i class="fas fa-user-circle"></i></a>
+                <a href="#skills"><i class="fas fa-graduation-cap"></i></a>
+                <a href="#work"><i class="fas fa-briefcase"></i></a>
+                <a href="#coords"><i class="fas fa-map-marker-alt"></i></a>
+            </div>
         </div>
-
-        <!-- LE TOGGLE POUR BASCULER D'UN MODE A L'AUTRE -->
-        <div id="toggle" class="flex-center">
-            <i class="fas fa-toggle-on"></i>
+    
+        <!-- NOM/PRENOM etc... -->
+        <div id="info" class="flex-col flex-space-btwn">
+            <div id="avatar"></div>
+            <div id="text-info">
+                <p class="thin">Huong</p>
+                <p class="black">LE</p>
+                <p class="metier light vert">Developpeur</p>
+                <p class="thin vertdark">web/web mobile</p>
+            </div>
+            <div id="menu-social">
+                <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="git"><i class="fab fa-github"></i></a>
+                <a href="#" class="lkd"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
-
-        <!-- MES ICONES/LIENS DE MENU -->
-        <div id="liens-menu" class="flex-col flex-space-arnd">
-            <a href="#about"><i class="fas fa-user-circle"></i></a>
-            <a href="#skills"><i class="fas fa-graduation-cap"></i></a>
-            <a href="#work"><i class="fas fa-briefcase"></i></a>
-            <a href="#coords"><i class="fas fa-map-marker-alt"></i></a>
-        </div>
+        <main class="flex flex-col flex-wrap">
+            <section id="about" class="flex flex-col">
+                <h1>A PROPOS <span class="thin">de moi</span></h1>
+                <h2 class="vert">32 ans <span class="thin">/</span> Avignon <span class="thin">/</span> Etudiante</h2>
+                <p>Je suis d’origine vietnamienne, j’ai étudié la microbiologie et, après mon doctorat, j’ai souhaité m’orienter vers ma passion : le déveleloppement web/web mobile.</p>
+                <p>Je suis l’heureuse maman d’un petit garçon et partage mon temps entre mes passions et mon travail.</p>
+                <p>J’aime décompresser autour d’un petit jogging/running et, dès que je le peux, je m’évade en m’offrant de petites escapades autour du monde.</p>
+                <p>D’ailleurs, je retourne régulièrement au Viet-Nam où habite ma famille.</p>
+                <p>Je parle vietnamien, anglais et français.</p>
+            </section>
+            <section id="skills">
+                <h1><span class="thin">Mes</span> études</h1>
+            </section>
+            <section id="work">
+                <h1><span class="thin">Mon</span> portfolio</h1>
+            </section>
+            <section id="coords">
+                <h1><span class="thin">Me</span> trouver <span class="thin">/ Me</span> joindre</h1>
+            </section>
+        </main>
     </div>
-    <div id="info"></div>
-    <main></main>
     
 <script src="js/app.js"></script>
 </body>

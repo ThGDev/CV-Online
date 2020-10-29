@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;900&display=swap');
 
 /*
  * style.css - Thierry GOGUET
@@ -12,12 +13,22 @@
     --bkg-color: #DDDDDD;
     --tog: rotate(0deg);
     --link-menu: rgba(29, 30, 32, 0.5);
+    --bg-color: #f4f4f4;
+    --shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+    --git-color: #1D1E20;
+    --vert-dark: #1D1E20;
+    --p-about:  rgba(29, 30, 32, 0.5);
   }
   body.dark-theme {
     --text-color: #eee;
     --bkg-color: #1D1E20;
     --tog: rotate(180deg);
     --link-menu: rgba(255, 255, 255, 0.1);
+    --bg-color: #1c1c1c;
+    --shadow: 0px 0px 100px rgba(0, 0, 0, 0.7);
+    --git-color: #ffffff;
+    --vert-dark: #3CA2A2;
+    --p-about:rgba(255, 255, 255, 0.5);
   }
 
  /* ============================== DARK THEME ============================== */
@@ -27,11 +38,21 @@
       --text-color: #eee;
       --bkg-color: #1D1E20;
       --tog: rotate(180deg);
+      --bg-color: #1c1c1c;
+      --shadow: 0px 0px 100px rgba(0, 0, 0, 0.7);
+      --git-color: #ffffff;
+      --vert-dark: #3CA2A2;
+      --p-about:rgba(255, 255, 255, 0.5);
     }
     body.light-theme {
       --text-color: #1D1E20;
       --bkg-color: #DDDDDD;
       --tog: rotate(0deg);
+      --bg-color: #f4f4f4;
+      --shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+      --git-color: #1D1E20;
+      --vert-dark: #1D1E20;
+      --p-about:  rgba(29, 30, 32, 0.5);
     }
   }
 
@@ -43,31 +64,75 @@
 }
 body{
     background: var(--bkg-color);
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    /* overflow: hidden; */
 }
 h1, p {
     color: var(--text-color);
 }
-.flex-center{
+h1{
+    font-size: 42px;
+    font-weight: 300;
+    margin: 30px 0 10px 0;
+}
+h2{
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0;
+}
+#wrap{
+    display: flex;
+    width: 100vw;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex-center{               /* MES REGLES FLEX */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.flex-space-arnd{
+.flex-space-btwn{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 .flex-col{
     flex-direction: column;
 }
+.flex-row{
+    flex-direction: row;
+}
 .flex-wrap{
     flex-wrap: wrap;
 }
+.thin{                      /* MES 3 EPAISSEURS DE FONT */
+    font-weight: 100;
+}
+.black{
+    font-weight: 900;
+}
+.light{
+    font-weight: 300;
+}
+.vert{                  /* Couleur verte */
+    color: #3CA2A2;
+}
+.vertdark{              /* couleur marron light/verte dark */
+    color: var(--vert-dark);
+}
+
+/* ++++++++++ LE MENU + LE TOGGLE DARK/LIGHT ++++++++++ */
 #menu{
     width: 5vw;
+    min-width: 80px;
     height: 100vh;
     font-size: 25px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 #iconlightmode{     /* mon en-tête de menu de luminosité */
@@ -78,9 +143,18 @@ h1, p {
     font-size: 35px;
 }
 
-#menu a, #menu a:visited{   /* les liens de mon menu */
+#liens-menu{           /* les liens de mon menu */
+    height: 85vh;
+}
+#liens-menu a{
     font-size: 46px;
+    margin: 10px 0;
     color: var(--link-menu);
+    transition: 0.5s;
+}
+#liens-menu a:hover, #liens-menu a:focus{
+    color: #3CA2A2;
+    transition: 0.5s;
 }
 
 #toggle{     
@@ -90,9 +164,82 @@ h1, p {
     cursor: pointer;
     color: #40B53E;
     transform: var(--tog);
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
-#liens-menu{
-    height: 85vh;
+/* ++++++++++ NOM/PRENOM/FONTION/SOCIAL ++++++++++ */
+#info{                      /* DIV CONTENEUR */
+    width: 20vw;
+    min-width: 250px;
+    height: 100vh;
+    background: var(--bg-color);
+    box-shadow: var(--shadow);
+    /* border: 1px solid black; */
+}
+#avatar{                    /* PHOTO DE PROFIL */
+    width: 130px;
+    min-width: 130px;
+    height: 130px;
+    min-height: 130px;
+    border:2px solid #c4c4c4;
+    border-radius: 50%;
+    background-image: url('../img/avatar.jpg');
+    background-position: center;
+    background-size: 105%;
+    margin-top: 20px;
+}
+                            /* NOM-PRENOM */
+#text-info p:nth-of-type(1), #text-info p:nth-of-type(2){
+    font-size: 4em;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+                            /* METIER */
+#text-info p:nth-of-type(3), #text-info p:nth-of-type(4){
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+
+#menu-social{               /* RESEAUX SOCIAUX */
+    margin-bottom: 20px;
+}
+#menu-social a{
+    margin: 0 10px;
+}
+.fb{
+    color: #3B5998;
+}
+.tw{
+    color: #1DA1F2;
+}
+.git{
+    color: var(--git-color);
+}
+.lkd{
+    color: #0077B5;
+}
+
+/* ++++++++++ MAIN ++++++++++ */
+main{
+    width: 75vw;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+}
+#about h2{
+    margin: 0 0 80px 0;
+}
+#about p{
+    width: 60vw;
+    line-height: 2em;
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--p-about);
+    text-align: justify;
+    /* border: 1px solid black; */
 }

@@ -1,7 +1,7 @@
 // ACTION SUR BOUTON TOGGLE
 // PASSAGE DARK-LIGHT MODE
 
-const btn = document.querySelector(".toggle");
+const btn = document.querySelector("#toggle");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 const currentTheme = localStorage.getItem("theme");
