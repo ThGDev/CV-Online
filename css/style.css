@@ -18,6 +18,7 @@
     --git-color: #1D1E20;
     --vert-dark: #1D1E20;
     --p-about:  rgba(29, 30, 32, 0.5);
+    --bg-pbar: #aaaaaa;
   }
   body.dark-theme {
     --text-color: #eee;
@@ -29,6 +30,7 @@
     --git-color: #ffffff;
     --vert-dark: #3CA2A2;
     --p-about:rgba(255, 255, 255, 0.5);
+    --bg-pbar: #dddddd;
   }
 
  /* ============================== DARK THEME ============================== */
@@ -43,6 +45,7 @@
       --git-color: #ffffff;
       --vert-dark: #3CA2A2;
       --p-about:rgba(255, 255, 255, 0.5);
+      --bg-pbar: #dddddd;
     }
     body.light-theme {
       --text-color: #1D1E20;
@@ -53,6 +56,7 @@
       --git-color: #1D1E20;
       --vert-dark: #1D1E20;
       --p-about:  rgba(29, 30, 32, 0.5);
+      --bg-pbar: #aaaaaa;
     }
   }
 
@@ -65,10 +69,9 @@
 body{
     background: var(--bkg-color);
     font-family: 'Poppins', sans-serif;
-    width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
-    /* overflow: hidden; */
+    /* overflow-x: hidden; */
+    overflow: hidden;
 }
 h1, p {
     color: var(--text-color);
@@ -76,7 +79,7 @@ h1, p {
 h1{
     font-size: 42px;
     font-weight: 300;
-    margin: 30px 0 10px 0;
+    margin: 1.5% 0 10px 0;
 }
 h2{
     font-size: 25px;
@@ -85,7 +88,9 @@ h2{
 }
 #wrap{
     display: flex;
-    width: 100vw;
+}
+.fixed{
+    position: fixed;
 }
 .flex{
     display: flex;
@@ -126,7 +131,7 @@ h2{
     color: var(--vert-dark);
 }
 
-/* ++++++++++ LE MENU + LE TOGGLE DARK/LIGHT ++++++++++ */
+/* ++++++++++++++++++++ LE MENU + LE TOGGLE DARK/LIGHT ++++++++++++++++++++ */
 #menu{
     width: 5vw;
     min-width: 80px;
@@ -137,8 +142,6 @@ h2{
 
 #iconlightmode{     /* mon en-tête de menu de luminosité */
     height: 10vh;
-    left: 0px;
-    top: 0px;
     background: #3CA2A2;
     font-size: 35px;
 }
@@ -148,7 +151,7 @@ h2{
 }
 #liens-menu a{
     font-size: 46px;
-    margin: 10px 0;
+    margin: 10% 0;
     color: var(--link-menu);
     transition: 0.5s;
 }
@@ -167,7 +170,7 @@ h2{
     /* border: 1px solid black; */
 }
 
-/* ++++++++++ NOM/PRENOM/FONTION/SOCIAL ++++++++++ */
+/* ++++++++++++++++++++ NOM/PRENOM/FONTION/SOCIAL ++++++++++++++++++++ */
 #info{                      /* DIV CONTENEUR */
     width: 20vw;
     min-width: 250px;
@@ -186,7 +189,7 @@ h2{
     background-image: url('../img/avatar.jpg');
     background-position: center;
     background-size: 105%;
-    margin-top: 20px;
+    margin-top: 10%;
 }
                             /* NOM-PRENOM */
 #text-info p:nth-of-type(1), #text-info p:nth-of-type(2){
@@ -222,24 +225,131 @@ h2{
     color: #0077B5;
 }
 
-/* ++++++++++ MAIN ++++++++++ */
+/* ++++++++++++++++++++ MAIN ++++++++++++++++++++ */
 main{
     width: 75vw;
+    position: absolute;
+    margin-left: 320px;
 }
 section{
     width: 100%;
+    min-width: 1000px;
     height: 100vh;
-    border: 1px solid black;
+    min-height: 600px;
+    /* border: 1px solid black; */
 }
+
+/* ######### ABOUT ######### */
 #about h2{
-    margin: 0 0 80px 0;
+    margin: 0 0 5% 0;
 }
-#about p{
-    width: 60vw;
+#about article p{
+    width: 70%;
     line-height: 2em;
     margin: 0;
     font-size: 1.2em;
     color: var(--p-about);
     text-align: justify;
     /* border: 1px solid black; */
+}
+
+/* ######### SKILLS ######### */
+#skills article{
+    width: 50%;
+    margin-top: 10px;
+}
+#skills article h2{
+    line-height: 1em;
+}
+#skills article p{
+    font-weight: 100;
+    line-height: 1.5em;
+    margin: 0;
+}
+#skills{
+    width: 80%;
+}
+.techno{
+    width: 100%;
+}
+.html5{                     /* COULEURS TECHNOS */
+    color: #E34F26;
+}
+.css3{
+    color: #264DE4;
+}
+.js{
+    color: #F0DB4F;
+}
+.pbar{                      /* BARRE DE PROGRESSION */
+    height: 10px;
+    width: 75%;
+	/* position: relative; */
+	background: var(--bg-pbar);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.pbar > span {
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+}
+.pbar > span.html5bar{
+    background-color: #E34F26;
+    width: 10%;  /* TAILLE DE LA PROGRESSION */
+}
+.pbar > span.css3bar{
+    background-color: #264DE4;
+    width: 10%;  /* TAILLE DE LA PROGRESSION */
+}
+.pbar > span.jsbar{
+    background-color: #F0DB4F;
+    width: 5%;  /* TAILLE DE LA PROGRESSION */
+}
+
+/* ######### PORTFOLIO ######### */
+#work article{
+    width: 80%;
+    justify-content: center;
+    /* margin-top: 2%; */
+}
+#work article .ombre{
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7));
+    margin: 0 40px 50px;
+}
+.image{
+    width: 150px;
+    height: 150px;
+    background: /*url(.png),*/ #E8BF56;
+    border-radius: 10px 10px 0px 0px;
+}
+.description{
+    width: 150px;
+    height: 57px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 10px 10px;
+}
+.description h5, .description .date, .description p{
+    margin: 0;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+/* ######### COORDONNEES ######### */
+#coords #texte{
+    width: 50%;
+    align-items: flex-start;
+}
+#coords #texte p{
+    line-height: 1em;
+}
+#coords #texte #bloc1 p{
+    font-size: 20px;
+}
+#coords #texte #bloc2 p{
+    margin-bottom: 30px;
+}
+#coords img{
+    width: 50%;
 }

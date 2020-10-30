@@ -1,7 +1,7 @@
 // ACTION SUR BOUTON TOGGLE
 // PASSAGE DARK-LIGHT MODE
 
-const btn = document.querySelector("#toggle");
+const btn = document.querySelector("#toggle");  // on sélectionne l'élément avec l'ID "toggle"
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 const currentTheme = localStorage.getItem("theme");
@@ -25,3 +25,20 @@ btn.addEventListener("click", function () {
   }
   localStorage.setItem("theme", theme);
 });
+
+// CHANGEMENT DE CLASSE DES BOUTONS DU MENU
+// AU CLIC
+
+// function changeClass() { 
+//   var lien = document.getElementById("myDIV");
+//   document.querySelector(IDelement).classList.toggle("vert"); 
+// }
+// const currentLocation = Location.href;
+// const menuItems = document.querySelectorAll('.MenuLinks');
+// const menuLength = menuItems.length;
+// for(let i = 0; i<menuLength; i++){
+//   if(menuItems[i].href === currentLocation){
+//     menuItems[i].className = "vert";
+//   }
+// }
+console.log(currentLocation);

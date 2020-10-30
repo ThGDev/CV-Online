@@ -6,64 +6,189 @@
     <title>CV de Huong LE</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="js/smoothScroll-ES5.js"></script>
 </head>
 <body>
     <div id="wrap" class="flex-row">
-        <!-- DIV MENU GAUCHE -->
-        <div id="menu" class="">
-            <!-- ICONE MODE DE LUMINOSITE -->
-            <div id="iconlightmode" class="flex-center">
-                <i class="fas fa-adjust"></i>
+        <div class="fixed flex flex-row">
+            <!-- DIV MENU GAUCHE -->
+            <div id="menu" class="">
+                <!-- ICONE MODE DE LUMINOSITE -->
+                <div id="iconlightmode" class="flex-center">
+                    <i class="fas fa-adjust"></i>
+                </div>
+        
+                <!-- LE TOGGLE POUR BASCULER D'UN MODE A L'AUTRE -->
+                <div id="toggle" class="flex-center">
+                    <i class="fas fa-toggle-on"></i>
+                </div>
+        
+                <!-- MES ICONES/LIENS DE MENU -->
+                <div id="liens-menu" class="flex-col flex-center">
+                    <a id="apropos" href="#about" scrollTo="about" class="scrollOnClick">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                    <a href="#skills" scrollTo="skills" class="scrollOnClick">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="#work" scrollTo="work" class="scrollOnClick">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                    <a href="#coords" scrollTo="coords" class="scrollOnClick">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                </div>
             </div>
-    
-            <!-- LE TOGGLE POUR BASCULER D'UN MODE A L'AUTRE -->
-            <div id="toggle" class="flex-center">
-                <i class="fas fa-toggle-on"></i>
-            </div>
-    
-            <!-- MES ICONES/LIENS DE MENU -->
-            <div id="liens-menu" class="flex-col flex-center">
-                <a href="#about"><i class="fas fa-user-circle"></i></a>
-                <a href="#skills"><i class="fas fa-graduation-cap"></i></a>
-                <a href="#work"><i class="fas fa-briefcase"></i></a>
-                <a href="#coords"><i class="fas fa-map-marker-alt"></i></a>
-            </div>
-        </div>
-    
-        <!-- NOM/PRENOM etc... -->
-        <div id="info" class="flex-col flex-space-btwn">
-            <div id="avatar"></div>
-            <div id="text-info">
-                <p class="thin">Huong</p>
-                <p class="black">LE</p>
-                <p class="metier light vert">Developpeur</p>
-                <p class="thin vertdark">web/web mobile</p>
-            </div>
-            <div id="menu-social">
-                <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="git"><i class="fab fa-github"></i></a>
-                <a href="#" class="lkd"><i class="fab fa-linkedin"></i></a>
+        
+            <!-- NOM/PRENOM etc... -->
+            <div id="info" class="flex-col flex-space-btwn">
+                <div id="avatar"></div>
+                <div id="text-info">
+                    <p class="thin">Huong</p>
+                    <p class="black">LE</p>
+                    <p class="metier light vert">Developpeur</p>
+                    <p class="thin vertdark">web/web mobile</p>
+                </div>
+                <div id="menu-social">
+                    <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="git"><i class="fab fa-github"></i></a>
+                    <a href="#" class="lkd"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
         </div>
         <main class="flex flex-col flex-wrap">
             <section id="about" class="flex flex-col">
+
+                <!-- A PROPOS -->
                 <h1>A PROPOS <span class="thin">de moi</span></h1>
                 <h2 class="vert">32 ans <span class="thin">/</span> Avignon <span class="thin">/</span> Etudiante</h2>
-                <p>Je suis d’origine vietnamienne, j’ai étudié la microbiologie et, après mon doctorat, j’ai souhaité m’orienter vers ma passion : le déveleloppement web/web mobile.</p>
-                <p>Je suis l’heureuse maman d’un petit garçon et partage mon temps entre mes passions et mon travail.</p>
-                <p>J’aime décompresser autour d’un petit jogging/running et, dès que je le peux, je m’évade en m’offrant de petites escapades autour du monde.</p>
-                <p>D’ailleurs, je retourne régulièrement au Viet-Nam où habite ma famille.</p>
-                <p>Je parle vietnamien, anglais et français.</p>
+                <article class="flex flex-col">                    
+                    <p>Je suis d’origine vietnamienne, j’ai étudié la microbiologie et, après mon doctorat, j’ai souhaité m’orienter vers ma passion : le déveleloppement web/web mobile.</p>
+                    <p>Je suis l’heureuse maman d’un petit garçon et partage mon temps entre mes passions et mon travail.</p>
+                    <p>J’aime décompresser autour d’un petit jogging/running et, dès que je le peux, je m’évade en m’offrant de petites escapades autour du monde.</p>
+                    <p>D’ailleurs, je retourne régulièrement au Viet-Nam où habite ma famille.</p>
+                    <p>Je parle vietnamien, anglais et français.</p>
+                </article>
             </section>
-            <section id="skills">
+            <section id="skills" class="flex flex-col">
+
+                <!-- ETUDES -->
                 <h1><span class="thin">Mes</span> études</h1>
+                <article>
+                    <h2 class="vert">2020 <span class="thin">-</span> 2021</h2>
+                    <p>Formation <span class="light">Développeur</span> Web et Web Mobile</p>
+                    <p>→ Simplon, <em><span class="light">Marseille</span></em>, France</p>
+                </article>
+                <article>
+                    <h2 class="vert">2015 <span class="thin">-</span> 2018</h2>
+                    <p><span class="light">Doctorat</span> en <span class="light">microbiologie</span></p>
+                    <p>→ Université Claude Bernard <em><span class="light">Lyon</span></em> 1, France</p>
+                </article>
+                <article>
+                    <h2 class="vert">2005 <span class="thin">-</span> 2009</h2>
+                    <p><span class="light">Bachelor</span> en <span class="light">science de l’environnement</span>, programme d'honneur</p>
+                    <p>→ Université Nationale de <em><span class="light">Hanoi</span></em>, Vietnam</p>
+                </article>
+                <h1><span class="thin">Mes</span> compétences</h1>
+                <article id="competences">
+                    <p class="vertdark">Bureautique : <span class="light vert">Pack Office</span></p>
+                    <p class="vertdark"><span class="light vert">Langage R</span> : traitement des données</p>
+                    <p class="vertdark"><span class="light vert">Logiciel Mothur</span> spécifique en bio-informatique</p>
+                </article>
+
+                <!-- COMPETENCES -->
+                <article id="skills" class="flex flex-col">
+                    <!-- HTML5 -->
+                    <div class="techno flex flex-row flex-space-btwn">
+                        <i class="fab fa-html5 html5"></i>
+                        <p>HTML5</p>
+                        <div class="pbar"><span class="cbar html5bar"></span></div>
+                    </div>
+                    <!-- CSS3 -->
+                    <div class="techno flex flex-row flex-space-btwn">
+                        <i class="fab fa-css3-alt css3"></i>
+                        <p>CSS3</p>
+                        <div class="pbar"><span class="cbar css3bar"></span></div>
+                    </div>
+                    <!-- JS -->
+                    <div class="techno flex flex-row flex-space-btwn">
+                        <i class="fab fa-js js"></i>
+                        <p>JS</p>
+                        <div class="pbar"><span class="cbar jsbar"></span></div>
+                    </div>
+                </article>
             </section>
-            <section id="work">
+
+            <!-- PORTFOLIO -->
+            <section id="work" class="flex flex-col">
                 <h1><span class="thin">Mon</span> portfolio</h1>
+                <article class="flex flex-row flex-wrap">
+                    <div class="ombre">
+                        <div class="image"></div>
+                        <div class="description flex-col flex-space-btwn">
+                            <h5>My Beautiful Work</h5>
+                            <div class="date">9/10/2020</div>
+                            <p>Description rapide</p>
+                        </div>
+                    </div>
+                    <div class="ombre">
+                        <div class="image"></div>
+                        <div class="description flex-col flex-space-btwn">
+                            <h5>My Beautiful Work</h5>
+                            <div class="date">9/10/2020</div>
+                            <p>Description rapide</p>
+                        </div>
+                    </div>
+                    <div class="ombre">
+                        <div class="image"></div>
+                        <div class="description flex-col flex-space-btwn">
+                            <h5>My Beautiful Work</h5>
+                            <div class="date">9/10/2020</div>
+                            <p>Description rapide</p>
+                        </div>
+                    </div>
+                    <div class="ombre">
+                        <div class="image"></div>
+                        <div class="description flex-col flex-space-btwn">
+                            <h5>My Beautiful Work</h5>
+                            <div class="date2">9/10/2020</div>
+                            <p>Description rapide</p>
+                        </div>
+                    </div>
+                    <div class="ombre">
+                        <div class="image"></div>
+                        <div class="description flex-col flex-space-btwn">
+                            <h5>My Beautiful Work</h5>
+                            <div class="date">9/10/2020</div>
+                            <p>Description rapide</p>
+                        </div>
+                    </div>
+                    <div class="ombre">
+                        <div class="image"></div>
+                        <div class="description flex-col flex-space-btwn">
+                            <h5>My Beautiful Work</h5>
+                            <div class="date">9/10/2020</div>
+                            <p>Description rapide</p>
+                        </div>
+                    </div>
+                </article>
             </section>
-            <section id="coords">
+
+            <!-- COORDONNEES -->
+            <section id="coords" class="flex flex-col">
                 <h1><span class="thin">Me</span> trouver <span class="thin">/ Me</span> joindre</h1>
+                <div id="texte" class="flex flex-col"> <!-- UNE DIV POUR "CASSER" LE FLEX ET ALIGNER LE TEXTE A GAUCHE -->
+                    <div id="bloc1">
+                        <p class="vertdark thin">29 avenue de la Trillade</p>
+                        <p class="vertdark thin">84000 <span class="light vert">Avignon</span></p>
+                    </div>
+                    <div id="bloc2">
+                        <p class="vert"><i class="fas fa-mobile-alt"></i> 06 46 44 76 37</p>
+                        <p class="vert"><i class="fas fa-at"></i> huongle2512@gmail.com</p>
+                    </div>
+                </div>
+                <img src="img/map.png" alt="Map" />
             </section>
         </main>
     </div>
