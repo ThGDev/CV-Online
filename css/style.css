@@ -40,6 +40,7 @@
       --text-color: #eee;
       --bkg-color: #1D1E20;
       --tog: rotate(180deg);
+      --link-menu: rgba(255, 255, 255, 0.1);
       --bg-color: #1c1c1c;
       --shadow: 0px 0px 100px rgba(0, 0, 0, 0.7);
       --git-color: #ffffff;
@@ -51,6 +52,7 @@
       --text-color: #1D1E20;
       --bkg-color: #DDDDDD;
       --tog: rotate(0deg);
+      --link-menu: rgba(29, 30, 32, 0.5);
       --bg-color: #f4f4f4;
       --shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
       --git-color: #1D1E20;
